@@ -1,0 +1,13 @@
+input {
+    margin-left: 20px;
+}
+
+#flex {
+    display: flex;
+    justify-content: center;
+}
+
+#cal {
+    margin-top: 20px;
+    margin-left: 20px;
+}

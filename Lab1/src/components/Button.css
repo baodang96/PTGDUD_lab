@@ -1,0 +1,31 @@
+.Primary {
+    background-color: #006ada;
+}
+
+.Secondary {
+    background-color: #6c757d;
+}
+
+.Success {
+    background-color: #28a745;
+}
+
+.Danger {
+    background-color: #dc3545;
+}
+
+.Warning {
+    background-color: #ffc107;
+}
+
+.Info {
+    background-color: #17a2b8;
+}
+
+.Light {
+    background-color: #f8f9fa;
+}
+
+.Dark {
+    background-color: #343a40;
+}

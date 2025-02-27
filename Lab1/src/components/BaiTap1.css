@@ -1,0 +1,37 @@
+* {
+    padding: 5px 0px;
+    margin: auto;
+}
+
+button {
+    color: aqua;
+    background-color: red;
+    font-size: 15px;
+    margin: 10px auto;
+    padding: -2px auto;
+}
+
+div {
+    background-color: white;
+}
+
+span {
+    color: black;
+    padding-right: 20px;
+}
+
+input {
+    border: 2px solid black;
+    margin-bottom: 5px;
+}
+
+#r {
+    padding: 0px;
+    font-weight: bold;
+    color: red;
+}
+
+p {
+    color: black;
+    font-weight: bold;
+}

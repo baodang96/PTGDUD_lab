@@ -1,0 +1,10 @@
+table {
+    margin: auto; /* Căn giữa theo chiều ngang */
+    border-collapse: collapse;
+    width: 80%; /* Điều chỉnh kích thước theo ý muốn */
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
