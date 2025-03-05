@@ -1,0 +1,19 @@
+ul {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+    margin-right: 10px;
+    font-size: 11px;
+}
+
+a {
+    color: white    ;
+}
+
+a:hover {
+    color: rgb(227, 123, 253);
+}
