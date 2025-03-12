@@ -1,0 +1,33 @@
+.footer {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(238, 193, 79);
+}
+
+.enter-email {
+    display: flex;
+}
+
+input {
+    height: 30px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+button {
+    height: 40px;
+    padding-bottom: -5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    background-color: rgb(241, 107, 130);
+}
+
+.policy {
+    margin-top: 50px;
+    display: flex;
+}
+
+h5 {
+    margin-bottom: 5px;
+    margin-left: 20px;
+}

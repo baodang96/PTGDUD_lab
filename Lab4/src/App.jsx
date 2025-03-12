@@ -1,11 +1,15 @@
 import './App.css'
-import RecipePage from './components/RecipePage/RecipePage'
+import Body from './components/Body'
+import Footer from './components/Footer'
+import Header from './components/Header'
 
 function App() {
 
   return (
     <>
-      <RecipePage></RecipePage>
+      <Header></Header>
+      <Body></Body>
+      <Footer></Footer>
     </>
   )
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import { Bookmark } from "lucide-react";
 import "./RecipeCard.css";
-import image95 from "T:/22709051/PTGDUD_lab/Lab3/src/img/Image95.png"
 
 function RecipeCard( {text, img, time}) {
   return (
