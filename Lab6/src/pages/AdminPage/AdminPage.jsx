@@ -1,4 +1,5 @@
 import Board from "../../components/Board/Board";
+import CustomerTable from "../../components/CustomerTable/CustomerTable";
 import Header from "../../components/Header/Header";
 import Nav from "../../components/Nav/Nav";
 
@@ -19,7 +20,7 @@ function AdminPage() {
                         <Board></Board>
                         <Board></Board>
                     </div>
-                    <div class="grid-table">
+                    {/* <div class="grid-table">
                         <div class="table-header">Header 1</div>
                         <div class="table-header">Header 2</div>
                         <div class="table-header">Header 3</div>
@@ -35,7 +36,8 @@ function AdminPage() {
                         <div>Row 3, Cell 1</div>
                         <div>Row 3, Cell 2</div>
                         <div>Row 3, Cell 3</div>
-                    </div>
+                    </div> */}
+                    <CustomerTable></CustomerTable>
                 </div>
             </div>
         </>
