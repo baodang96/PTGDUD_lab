@@ -3,6 +3,10 @@ import CustomerTable from "../../components/CustomerTable/CustomerTable";
 import Header from "../../components/Header/Header";
 import Nav from "../../components/Nav/Nav";
 
+import cart from "../../assets/ButtonCart.png";
+import dollar from "../../assets/ButtonDollar.png";
+import profile from "../../assets/ButtonProfile.png";
+
 import './AdminPage.css'
 
 function AdminPage() {
@@ -15,10 +19,10 @@ function AdminPage() {
                 <div className="content-side">
                     <Header></Header>
                     <div className="dash-board">
-                        <Board></Board>
-                        <Board></Board>
-                        <Board></Board>
-                        <Board></Board>
+                        {/* background = a, b, c */}
+                        <Board label={"Turnover"} value={92405} percent={5.53} icon={cart} background={"a"}></Board>
+                        <Board label={"Profit"} value={32218} percent={5.39} icon={dollar} background={"b"}></Board>
+                        <Board label={"New customer"} value={289} percent={6.48} icon={profile} background={"c"}></Board>
                     </div>
                     {/* <div class="grid-table">
                         <div class="table-header">Header 1</div>
