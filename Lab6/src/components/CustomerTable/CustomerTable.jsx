@@ -122,7 +122,7 @@ const CustomerTable = () => {
         <span>11</span>
         <span>»</span>
       </div>
-      <p className="results-count">63 results</p>
+      <p className="results-count">{customers.length} results</p>
     </div>
   );
 };
