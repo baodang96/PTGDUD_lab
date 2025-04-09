@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { data } from 'react-router-dom';
 
 const OverviewContext = createContext();
 
@@ -9,7 +10,7 @@ export const useOverview = () => {
 
 // Tạo OverviewProvider để bao bọc các component cần dữ liệu
 export const OverviewProvider = ({ children }) => {
-  const [overview, setOverview] = useState(null);  // "overview" should be an object
+  const [overview, setOverview] = useState([]);  // "overview" should be an object
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -17,18 +18,22 @@ export const OverviewProvider = ({ children }) => {
     // Lấy dữ liệu từ tệp JSON (Giả sử bạn có tệp 'overview.json')
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5001/overview');  // Đảm bảo đường dẫn chính xác
+        const response = await fetch('http://localhost:5000/overview');
         const data = await response.json();
-        setOverview(data);  // Ensure it's accessing 'overview' correctly
+        setOverview(data); // <-- FIX HERE
       } catch (err) {
         setError(err);
       } finally {
         setLoading(false);
       }
     };
+    
     fetchData();
   }, []);
+
+  console.log(overview);
   
+
   return (
     <OverviewContext.Provider value={{ overview, loading, error }}>
       {children}

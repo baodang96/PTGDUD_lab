@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "concurrently \"json-server --watch public/customers.json --port 5000\" \"json-server --watch public/overview.json --port 5001\""
+    "server": "json-server --watch public/db.json --port 5000"
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.3",
