@@ -62,6 +62,24 @@
       "orderValue": 630,
       "orderDate": "12/09/2023",
       "status": "New"
+    },
+    {
+      "id": "fdf9",
+      "name": "Đặng Gia Bão",
+      "avatar": "/assets/Avatar.png",
+      "company": "null",
+      "orderValue": "1231",
+      "orderDate": "12/1/2025",
+      "status": "Completed"
+    },
+    {
+      "id": "29d6",
+      "name": "Đặng Gia Bão 2",
+      "avatar": "/assets/Avatar.png",
+      "company": "IUH",
+      "orderValue": "123",
+      "orderDate": "11/09/2024",
+      "status": "In-progress"
     }
   ],
   "overview": [

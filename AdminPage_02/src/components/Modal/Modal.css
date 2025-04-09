@@ -16,6 +16,7 @@
     padding: 20px;
     border-radius: 12px;
     width: 400px;
+    background-color: rgb(148, 230, 251);
   }
   
   .modal h2 {
@@ -28,9 +29,13 @@
   }
   
   .modal input, .modal select {
-    width: 100%;
+    width: 95%;
     padding: 8px;
     margin-bottom: 1rem;
+  }
+
+  .modal select {
+    width: 100%;
   }
   
   .modal-actions {

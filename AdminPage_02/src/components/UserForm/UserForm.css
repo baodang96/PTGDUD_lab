@@ -1,0 +1,36 @@
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .user-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+  }
+  
+  .user-form input,
+  .user-form select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .user-form button {
+    padding: 10px 16px;
+    background-color: #f48fb1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .user-form button:hover {
+    background-color: #ec407a;
+  }
+  
