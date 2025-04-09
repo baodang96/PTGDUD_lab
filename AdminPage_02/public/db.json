@@ -1,8 +1,8 @@
 {
   "customers": [
     {
-      "id": 1,
-      "name": "Elizabeth Lee",
+      "id": "1",
+      "name": "baovippro",
       "avatar": "/assets/Avatar.png",
       "company": "AvatarSystems",
       "orderValue": 359,
@@ -10,8 +10,8 @@
       "status": "New"
     },
     {
-      "id": 2,
-      "name": "Carlos Garcia",
+      "id": "2",
+      "name": "baovippro2",
       "avatar": "/assets/Avatar1.png",
       "company": "SmoozeShift",
       "orderValue": 747,
@@ -19,7 +19,7 @@
       "status": "New"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Elizabeth Bailey",
       "avatar": "/assets/Avatar2.png",
       "company": "Prime Time Telecom",
@@ -28,7 +28,7 @@
       "status": "In-progress"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Ryan Brown",
       "avatar": "/assets/Avatar3.png",
       "company": "OmniTech Corporation",
@@ -37,7 +37,7 @@
       "status": "In-progress"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Ryan Young",
       "avatar": "/assets/Avatar4.png",
       "company": "DataStream Inc.",
@@ -46,7 +46,7 @@
       "status": "Completed"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Hailey Adams",
       "avatar": "/assets/Avatar5.png",
       "company": "FlowRush",
@@ -55,7 +55,7 @@
       "status": "Completed"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Sophia Turner",
       "avatar": "/assets/Avatar6.png",
       "company": "NextGen Solutions",
@@ -71,7 +71,8 @@
       "percent": 5.53,
       "icon": "/assets/ButtonCart.png",
       "background": "a",
-      "href": "/turnover"
+      "href": "/turnover",
+      "id": "d0fc"
     },
     {
       "label": "Profit",
@@ -79,7 +80,8 @@
       "percent": 5.39,
       "icon": "/assets/ButtonDollar.png",
       "background": "b",
-      "href": "/profit"
+      "href": "/profit",
+      "id": "aaeb"
     },
     {
       "label": "New customer",
@@ -87,7 +89,8 @@
       "percent": 6.44,
       "icon": "/assets/ButtonProfile.png",
       "background": "a",
-      "href": "/newcustomer"
+      "href": "/newcustomer",
+      "id": "de64"
     }
   ]
 }
