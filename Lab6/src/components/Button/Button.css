@@ -1,0 +1,24 @@
+.custom-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: 2px solid #f48fb1; /* màu hồng nhạt */
+    border-radius: 8px;
+    background-color: transparent;
+    color: #f48fb1;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: #fce4ec; /* hiệu ứng hover nhẹ */
+  }
+  
+  .button-icon {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
