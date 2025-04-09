@@ -18,9 +18,9 @@ function AdminPage() {
         <div className="content-side">
           <Header />
           <div className="dash-board">
-            {overview.map((item, index) => (
+            {overview.map((item) => (
               <Board
-                key={index}
+                key={item.id}
                 label={item.label}
                 value={item.value}
                 percent={item.percent}

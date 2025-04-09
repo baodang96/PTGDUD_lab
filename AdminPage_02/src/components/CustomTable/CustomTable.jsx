@@ -1,5 +1,7 @@
 import "./CustomTable.css";
 import { useCustomers } from "../../contexts/CustomerContext";
+import { useState } from "react";
+import Modal from "../Modal/Modal";
 
 const statusStyles = {
   New: "status new",
@@ -8,8 +10,20 @@ const statusStyles = {
 };
 
 const CustomerTable = () => {
-
   const { customers } = useCustomers();
+
+  const [selectedCustomer, setSelectedCustomer] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleEditClick = (customer) => {
+    setSelectedCustomer({ ...customer }); // clone để chỉnh sửa tạm
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+    setSelectedCustomer(null);
+  };
 
   return (
     <div className="table-container">
@@ -44,7 +58,18 @@ const CustomerTable = () => {
                 </span>
               </td>
               <td>
-                <span className="edit-icon">✏️</span>
+                <span
+                  className="edit-icon"
+                  onClick={() => handleEditClick(customer)}
+                >
+                  ✏️
+                </span>
+                {isModalOpen && (
+                  <Modal
+                    customer={selectedCustomer}
+                    onClose={handleModalClose}
+                  />
+                )}
               </td>
             </tr>
           ))}
