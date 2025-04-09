@@ -18,7 +18,7 @@ export const CustomerProvider = ({ children }) => {
     // Lấy dữ liệu từ tệp JSON (Giả sử bạn có tệp 'customers.json')
     const fetchData = async () => {
       try {
-        const response = await fetch('../json/customers.json');  // Đảm bảo đường dẫn chính xác
+        const response = await fetch('/customers.json');  // Đảm bảo đường dẫn chính xác
         const data = await response.json();
         setCustomers(data.customers);   
       } catch (err) {

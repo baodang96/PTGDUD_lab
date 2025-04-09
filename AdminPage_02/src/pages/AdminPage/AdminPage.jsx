@@ -1,4 +1,5 @@
 import Board from "../../components/Board/Board";
+import CustomerTable from "../../components/CustomTable/CustomTable";
  import Header from "../../components/Header/Header";
  import Nav from "../../components/Nav/Nav";
  
@@ -19,23 +20,7 @@ import Board from "../../components/Board/Board";
                          <Board></Board>
                          <Board></Board>
                      </div>
-                     <div class="grid-table">
-                         <div class="table-header">Header 1</div>
-                         <div class="table-header">Header 2</div>
-                         <div class="table-header">Header 3</div>
- 
-                         <div>Row 1, Cell 1</div>
-                         <div>Row 1, Cell 2</div>
-                         <div>Row 1, Cell 3</div>
- 
-                         <div>Row 2, Cell 1</div>
-                         <div>Row 2, Cell 2</div>
-                         <div>Row 2, Cell 3</div>
- 
-                         <div>Row 3, Cell 1</div>
-                         <div>Row 3, Cell 2</div>
-                         <div>Row 3, Cell 3</div>
-                     </div>
+                     <CustomerTable></CustomerTable>
                  </div>
              </div>
          </>

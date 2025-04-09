@@ -1,13 +1,16 @@
 import './App.css'
- import AdminPage from './pages/AdminPage/AdminPage'
- 
- function App() {
- 
-   return (
-     <>
-     <AdminPage></AdminPage>
-     </>
-   )
- }
- 
- export default App
+import AdminPage from './pages/AdminPage/AdminPage'
+import { CustomerProvider } from './contexts/CustomerContext'
+
+function App() {
+
+  return (
+    <>
+      <CustomerProvider>
+        <AdminPage></AdminPage>
+      </CustomerProvider>
+    </>
+  )
+}
+
+export default App
