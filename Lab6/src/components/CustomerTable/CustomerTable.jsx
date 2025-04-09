@@ -1,11 +1,5 @@
 import "./CustomerTable.css";
-import avt1 from '../../assets/Avatar.png'
-import avt2 from '../../assets/Avatar1.png'
-import avt3 from '../../assets/Avatar2.png'
-import avt4 from '../../assets/Avatar3.png'
-import avt5 from '../../assets/Avatar4.png'
-import avt6 from '../../assets/Avatar5.png'
-import avt7 from '../../assets/Avatar6.png'
+
 
 const statusStyles = {
   New: "status new",

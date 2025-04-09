@@ -7,7 +7,7 @@ import { useOverview } from "../../contexts/OverviewContext";
 import './AdminPage.css'
 
 function AdminPage() {
-  const { overview } = useOverview(); // Get the 'overview' array from the context
+  const { overview } = useOverview();
 
   return (
     <>
@@ -18,9 +18,9 @@ function AdminPage() {
         <div className="content-side">
           <Header />
           <div className="dash-board">
-            {overview.map((item) => (
+            {overview.map((item, index) => (
               <Board
-                key={item.label}  // Unique key for each Board
+                key={index}
                 label={item.label}
                 value={item.value}
                 percent={item.percent}

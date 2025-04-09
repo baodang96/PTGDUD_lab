@@ -17,20 +17,18 @@ export const OverviewProvider = ({ children }) => {
     // Lấy dữ liệu từ tệp JSON (Giả sử bạn có tệp 'overview.json')
     const fetchData = async () => {
       try {
-        const response = await fetch('/overview.json');  // Đảm bảo đường dẫn chính xác
+        const response = await fetch('http://localhost:5001/overview');  // Đảm bảo đường dẫn chính xác
         const data = await response.json();
-        setOverview(data.overview);  // Ensure it's accessing 'overview' correctly
+        setOverview(data);  // Ensure it's accessing 'overview' correctly
       } catch (err) {
         setError(err);
       } finally {
         setLoading(false);
       }
     };
-
     fetchData();
-    console.log(overview);
   }, []);
-
+  
   return (
     <OverviewContext.Provider value={{ overview, loading, error }}>
       {children}
