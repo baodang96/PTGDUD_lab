@@ -1,0 +1,28 @@
+{
+    "overview": [
+        {
+            "label" : "Turnover",
+            "value": 92405,
+            "percent": 5.53, 
+            "icon": "/assets/ButtonCart.png",
+            "background": "a",
+            "href": "/turnover"
+        },
+        {
+            "label" : "Profit",
+            "value": 32219,
+            "percent": 5.39, 
+            "icon": "/assets/ButtonDollar.png",
+            "background": "b",
+            "href": "/profit"
+        },
+        {
+            "label" : "New customer",
+            "value": 289,
+            "percent": 6.44, 
+            "icon": "/assets/ButtonProfile.png",
+            "background": "a",
+            "href": "/newcustomer"
+        }
+    ]
+}

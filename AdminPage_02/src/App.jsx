@@ -1,13 +1,16 @@
 import './App.css'
 import AdminPage from './pages/AdminPage/AdminPage'
 import { CustomerProvider } from './contexts/CustomerContext'
+import { OverviewProvider } from './contexts/OverviewContext'
 
 function App() {
 
   return (
     <>
       <CustomerProvider>
-        <AdminPage></AdminPage>
+        <OverviewProvider>
+          <AdminPage></AdminPage>
+        </OverviewProvider>
       </CustomerProvider>
     </>
   )

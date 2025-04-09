@@ -1,6 +1,70 @@
 .board {
-    height: 100px;
-    width: 200px;
-    background-color: aqua;
-    margin: 5px;
-}
+    background-color: #fef2f4;
+    margin-right: 5px;
+    padding: 24px;
+    width: 320px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  #a {
+    background-color: #f3d6e7;
+  }
+
+  #b {
+    background-color: #d6f1f3;
+  }
+
+  #c {
+    background-color: #91e4eb;
+  }
+  
+  .board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .label {
+    color: #6b7280;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+  }
+  
+  .value {
+    color: #111827;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 4px 0 0 0;
+    text-align: left;
+  }
+  
+  .icon-box {
+    color: #ec4899;
+    padding: 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .change-info {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .change-up {
+    color: #16a34a;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .change-text {
+    color: #6b7280;
+    font-size: 14px;
+  }
