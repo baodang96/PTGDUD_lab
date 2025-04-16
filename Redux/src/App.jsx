@@ -1,12 +1,13 @@
 import './App.css'
+import Counter from './CounterApp/Redux/Counter'
 
-import UseReducer from './CouterApp/UseReducer'
+import UseReducer from './CounterApp/UseReducer'
 
 function App() {
 
   return (
     <>
-      <UseReducer></UseReducer>
+      <Counter></Counter>
     </>
   )
 }
