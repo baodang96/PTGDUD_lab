@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BookItem from "./BookItem";
 
 const initialBooks = [
@@ -9,10 +9,19 @@ const initialBooks = [
 ];
 
 function BookList() {
-  const [books, setBooks] = useState(initialBooks);
+  const [books, setBooks] = useState(() => {
+    // Lấy dữ liệu từ localStorage khi khởi tạo
+    const savedBooks = localStorage.getItem("books");
+    return savedBooks ? JSON.parse(savedBooks) : initialBooks;
+  });
   const [newBook, setNewBook] = useState({ title: "", author: "", genre: "", year: "" });
   const [searchTerm, setSearchTerm] = useState("");
   const [filterGenre, setFilterGenre] = useState("");
+
+  useEffect(() => {
+    // Lưu danh sách sách vào localStorage mỗi khi thay đổi
+    localStorage.setItem("books", JSON.stringify(books));
+  }, [books]);
 
   const handleChange = (e) => {
     setNewBook({ ...newBook, [e.target.name]: e.target.value });
