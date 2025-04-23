@@ -1,16 +1,15 @@
+import React from "react";
+
 function BookItem({ book, onDelete }) {
-    return (
-      <div style={{ 
-        border: "1px solid #ccc", padding: "10px", marginBottom: "10px", borderRadius: "6px" 
-      }}>
-        <p><strong>Tên:</strong> {book.title}</p>
-        <p><strong>Tác giả:</strong> {book.author}</p>
-        <p><strong>Thể loại:</strong> {book.genre}</p>
-        <p><strong>Năm:</strong> {book.year}</p>
-        <button onClick={() => onDelete(book.id)}>Xoá</button>
-      </div>
-    );
-  }
-  
-  export default BookItem;
-  
+  return (
+    <div style={{ marginBottom: "10px", border: "1px solid #ddd", padding: "10px" }}>
+      <h3>{book.title}</h3>
+      <p><strong>Tác giả:</strong> {book.author}</p>
+      <p><strong>Thể loại:</strong> {book.genre}</p>
+      <p><strong>Năm:</strong> {book.year}</p>
+      <button onClick={() => onDelete(book.id)}>Xoá</button>
+    </div>
+  );
+}
+
+export default BookItem;

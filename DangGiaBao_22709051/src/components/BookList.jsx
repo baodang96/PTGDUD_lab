@@ -30,9 +30,10 @@ function BookList() {
   const handleAdd = () => {
     if (!newBook.title || !newBook.author || !newBook.genre || !newBook.year) return;
 
+    // Sử dụng chiều dài mảng hiện tại làm ID mới
     const newEntry = {
       ...newBook,
-      id: Date.now(),
+      id: books.length + 1, // ID mới bằng chiều dài mảng cộng 1
       year: parseInt(newBook.year)
     };
     setBooks([...books, newEntry]);
