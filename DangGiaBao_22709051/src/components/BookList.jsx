@@ -53,13 +53,15 @@ function BookList() {
         <button onClick={handleAdd}>Thêm sách</button>
       </div>
 
-      <h2>Lọc sách</h2>
+      <h2>Tìm kiếm sách</h2>
       <input
         type="text"
         placeholder="Tìm theo tên"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
+
+      <h2>Lọc sách</h2>
       <select value={filterGenre} onChange={(e) => setFilterGenre(e.target.value)} style={{ marginLeft: "10px" }}>
         <option value="">Tất cả thể loại</option>
         {genres.map((g, idx) => (
@@ -71,6 +73,8 @@ function BookList() {
       {filteredBooks.map(book => (
         <BookItem key={book.id} book={book} onDelete={handleDelete} />
       ))}
+
+      <h3>Tổng số sách: {filteredBooks.length}</h3>
     </div>
   );
 }
