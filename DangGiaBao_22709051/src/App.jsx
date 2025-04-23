@@ -1,6 +1,7 @@
 import './App.css'
 import React from "react";
 import BookList from "./components/BookList";
+import './styles.css'
 function App() {
 
   return (
