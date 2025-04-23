@@ -35,6 +35,8 @@ select {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+    justify-self: center;
+    justify-content: center;
 }
 
 button {
@@ -59,6 +61,7 @@ button:hover {
     margin-bottom: 10px;
     border-radius: 8px;
     background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .book-item h3 {
@@ -95,4 +98,8 @@ button {
 select {
     width: 50%;
     margin-top: 10px;
+}
+
+.list-book {
+    display: flex;
 }

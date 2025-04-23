@@ -79,8 +79,8 @@ function BookList() {
                 ))}
             </select>
 
+            <h2>Danh sách sách</h2>
             <div className="list-book">
-                <h2>Danh sách sách</h2>
                 {filteredBooks.map(book => (
                     <BookItem key={book.id} book={book} onDelete={handleDelete} />
                 ))}
