@@ -3,14 +3,16 @@ import BookItem from "./BookItem";
 
 const initialBooks = [
   { id: 1, title: "Đắc Nhân Tâm", author: "Dale Carnegie", genre: "Tâm lý", year: 1936 },
-  { id: 2, title: "Harry Potter", author: "J.K. Rowling", genre: "Fantasy", year: 1997 },
-  { id: 3, title: "Tuổi trẻ đáng giá bao nhiêu", author: "Rosie Nguyễn", genre: "Phát triển", year: 2016 }
+  { id: 2, title: "Harry Potter", author: "J.K. Rowling", genre: "Văn học", year: 1997 },
+  { id: 3, title: "Tuổi trẻ đáng giá bao nhiêu", author: "Rosie Nguyễn", genre: "Tâm lý", year: 2016 },
+  { id: 4, title: "Lược sử thời gian", author: "Stephen Hawking", genre: "Khoa học", year: 1988 }
 ];
 
 function BookList() {
   const [books, setBooks] = useState(initialBooks);
   const [newBook, setNewBook] = useState({ title: "", author: "", genre: "", year: "" });
   const [searchTerm, setSearchTerm] = useState("");
+  const [filterGenre, setFilterGenre] = useState("");
 
   const handleChange = (e) => {
     setNewBook({ ...newBook, [e.target.name]: e.target.value });
@@ -32,9 +34,13 @@ function BookList() {
     setBooks(books.filter(book => book.id !== id));
   };
 
-  const filteredBooks = books.filter(book =>
-    book.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredBooks = books.filter(book => {
+    const matchTitle = book.title.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchGenre = filterGenre === "" || book.genre === filterGenre;
+    return matchTitle && matchGenre;
+  });
+
+  const genres = Array.from(new Set(books.map(book => book.genre)));
 
   return (
     <div>
@@ -47,14 +53,19 @@ function BookList() {
         <button onClick={handleAdd}>Thêm sách</button>
       </div>
 
-      <h2>Tìm kiếm sách</h2>
+      <h2>Lọc sách</h2>
       <input
         type="text"
-        placeholder="Nhập tên sách để tìm"
+        placeholder="Tìm theo tên"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        style={{ marginBottom: "10px" }}
       />
+      <select value={filterGenre} onChange={(e) => setFilterGenre(e.target.value)} style={{ marginLeft: "10px" }}>
+        <option value="">Tất cả thể loại</option>
+        {genres.map((g, idx) => (
+          <option key={idx} value={g}>{g}</option>
+        ))}
+      </select>
 
       <h2>Danh sách sách</h2>
       {filteredBooks.map(book => (
