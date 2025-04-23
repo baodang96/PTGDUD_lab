@@ -10,6 +10,7 @@ const initialBooks = [
 function BookList() {
   const [books, setBooks] = useState(initialBooks);
   const [newBook, setNewBook] = useState({ title: "", author: "", genre: "", year: "" });
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleChange = (e) => {
     setNewBook({ ...newBook, [e.target.name]: e.target.value });
@@ -31,43 +32,32 @@ function BookList() {
     setBooks(books.filter(book => book.id !== id));
   };
 
+  const filteredBooks = books.filter(book =>
+    book.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div>
       <h2>Thêm sách mới</h2>
       <div style={{ marginBottom: "15px" }}>
-        <input
-          type="text"
-          name="title"
-          placeholder="Tên sách"
-          value={newBook.title}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="author"
-          placeholder="Tác giả"
-          value={newBook.author}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="genre"
-          placeholder="Thể loại"
-          value={newBook.genre}
-          onChange={handleChange}
-        />
-        <input
-          type="number"
-          name="year"
-          placeholder="Năm"
-          value={newBook.year}
-          onChange={handleChange}
-        />
+        <input type="text" name="title" placeholder="Tên sách" value={newBook.title} onChange={handleChange} />
+        <input type="text" name="author" placeholder="Tác giả" value={newBook.author} onChange={handleChange} />
+        <input type="text" name="genre" placeholder="Thể loại" value={newBook.genre} onChange={handleChange} />
+        <input type="number" name="year" placeholder="Năm" value={newBook.year} onChange={handleChange} />
         <button onClick={handleAdd}>Thêm sách</button>
       </div>
 
+      <h2>Tìm kiếm sách</h2>
+      <input
+        type="text"
+        placeholder="Nhập tên sách để tìm"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        style={{ marginBottom: "10px" }}
+      />
+
       <h2>Danh sách sách</h2>
-      {books.map(book => (
+      {filteredBooks.map(book => (
         <BookItem key={book.id} book={book} onDelete={handleDelete} />
       ))}
     </div>
